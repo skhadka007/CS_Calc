@@ -3,7 +3,7 @@ Python GUI Calculator for the general CS university student.
 
 **Implemented**<br>
 
-**Need to implement**<br>
+**Need to implement**
 - Basic calculator functions.
 - Base converter: decimal, binary, octal, hex, etc.
 - Linear Algebra: Matrix Calculator
