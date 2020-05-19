@@ -8,4 +8,14 @@ Python GUI Calculator for the general CS university student.
 - Base converter: decimal, binary, octal, hex, etc.
 - Linear Algebra: Matrix Calculator
 - "Hello World" Generator for various languages + comment explanations
--- C, C#, C++, Java, Python,
+  - C, C#, C++, Java, Python,
+- Conversions
+  - Volume
+  - Length
+  - Weight/Mass
+  - Temperature
+  - Speed
+  - Time
+  - Power
+  -
+   
