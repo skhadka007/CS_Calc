@@ -2,11 +2,15 @@
 ## CS Calc - main file
 from tkinter import *
 
+def clearInput():
+    inputBox = Entry(root, text="", borderwidth=2)
+    inputBox.grid(row=1, column=0, columnspan=5)
+
 ## Root needs to be created FIRST
 root = Tk()
 
 ## Entry Box
-inputBox = Entry(root, text="")
+inputBox = Entry(root, text="", borderwidth=2)
 
 ## Menu Bar
 label_File = Label(root, text="File")
@@ -31,7 +35,8 @@ button_addi = Button(root, text="+")
 button_mult = Button(root, text="x")
 button_subt = Button(root, text="-")
 button_divi = Button(root, text="%")
-button_equal = Button(root, text="=")
+
+button_equal = Button(root, text="=", command=clearInput)
 
 button_square = Button(root, text="x^2")
 button_cube = Button(root, text="x^3")
@@ -49,7 +54,7 @@ button_csc = Button(root, text="csc")
 button_cot = Button(root, text="cot")
 
 button_decimal = Button(root, text=".")
-button_clear = Button(root, text="C")
+button_clear = Button(root, text="C", command=clearInput)
 button_pi = Button(root, text="pi")
 button_div = Button(root, text="div")
 button_mod = Button(root, text="mod")
