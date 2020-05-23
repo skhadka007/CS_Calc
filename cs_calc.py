@@ -10,7 +10,7 @@ def clearInput():
 root = Tk()
 
 ## Entry Box
-inputBox = Entry(root, text="", borderwidth=2)
+inputBox = Entry(root, text="", borderwidth=2, width=40)
 
 ## Menu Bar
 label_File = Label(root, text="File")
