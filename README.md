@@ -2,6 +2,7 @@
 Python GUI Calculator for the general CS university student.
 
 **Implemented**<br>
+- Calculator buttons & input box
 
 **Need to implement**
 - Basic calculator functions.
@@ -17,5 +18,4 @@ Python GUI Calculator for the general CS university student.
   - Speed
   - Time
   - Power
-  -
    
