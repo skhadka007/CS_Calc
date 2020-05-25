@@ -1,15 +1,39 @@
-3## Santosh Khadka
+## Santosh Khadka
 ## CS Calc - main file
 from tkinter import *
 
 ## Width and Height for Buttons
 #paddingx = 45; paddingy = 30
-btnWidth=9; btnHeight=2
-randomInt_min = 1; randomInt_max = 6
+btnWidth=9
+btnHeight=2
 
-def clearInput():
-    inputBox = Entry(root, text="", borderwidth=2, width=59)
-    inputBox.grid(row=1, column=0, columnspan=5)
+randomInt_min = 1
+randomInt_max = 6
+
+num1 = 0
+num2 = 0
+numCheck = 0
+
+## Functions
+# Clear Entry box
+def clearEntryBox():
+    inputBox.delete(0, END) 
+# Input number
+def writeNum(number):
+    inputBox.insert(0, number) #(location, variable)
+
+## Mathematical Functions
+def addFunct():
+    num1 = num1 + int(inputBox.get())
+    clearEntryBox()
+
+
+def subtFunct():
+    return
+def multFunct():
+    return
+def diviFunct():
+    return
 
 ## Root needs to be created FIRST
 root = Tk()
@@ -29,29 +53,29 @@ label_change1 = Label(root, text="    ")
 
 ## Buttons: Digits 0-9, +x-%=, clear, x^2, x^3, 10^x, log, ln, n!, (), +/-, ., etc.
 # Numerical Buttons
-button_0 = Button(root, text="0", width=btnWidth, height=btnHeight)
-button_1 = Button(root, text="1", width=btnWidth, height=btnHeight)
-button_2 = Button(root, text="2", width=btnWidth, height=btnHeight)
-button_3 = Button(root, text="3", width=btnWidth, height=btnHeight)
-button_4 = Button(root, text="4", width=btnWidth, height=btnHeight)
-button_5 = Button(root, text="5", width=btnWidth, height=btnHeight)
-button_6 = Button(root, text="6", width=btnWidth, height=btnHeight)
-button_7 = Button(root, text="7", width=btnWidth, height=btnHeight)
-button_8 = Button(root, text="8", width=btnWidth, height=btnHeight)
-button_9 = Button(root, text="9", width=btnWidth, height=btnHeight)
+button_0 = Button(root, text="0", width=btnWidth, height=btnHeight, command=lambda: writeNum(0))
+button_1 = Button(root, text="1", width=btnWidth, height=btnHeight, command=lambda: writeNum(1))
+button_2 = Button(root, text="2", width=btnWidth, height=btnHeight, command=lambda: writeNum(2))
+button_3 = Button(root, text="3", width=btnWidth, height=btnHeight, command=lambda: writeNum(3))
+button_4 = Button(root, text="4", width=btnWidth, height=btnHeight, command=lambda: writeNum(4))
+button_5 = Button(root, text="5", width=btnWidth, height=btnHeight, command=lambda: writeNum(5))
+button_6 = Button(root, text="6", width=btnWidth, height=btnHeight, command=lambda: writeNum(6))
+button_7 = Button(root, text="7", width=btnWidth, height=btnHeight, command=lambda: writeNum(7))
+button_8 = Button(root, text="8", width=btnWidth, height=btnHeight, command=lambda: writeNum(8))
+button_9 = Button(root, text="9", width=btnWidth, height=btnHeight, command=lambda: writeNum(9))
 
-button_addi = Button(root, text="+", width=btnWidth, height=btnHeight)
+button_addi = Button(root, text="+", width=btnWidth, height=btnHeight, command=addFunct)
 button_mult = Button(root, text="*", width=btnWidth, height=btnHeight)
 button_subt = Button(root, text="-", width=btnWidth, height=btnHeight)
 button_divi = Button(root, text="%", width=btnWidth, height=btnHeight)
 
 # Equal (=) Button, Clear, BackOne, Decimal, Pi, RandomInt
-button_equal = Button(root, text="=", width=btnWidth, height=btnHeight+3, command=clearInput)
-button_clear = Button(root, text="CLEAR", width=btnWidth, height=btnHeight, command=clearInput)
-button_back1 = Button(root,text="<-", width=btnWidth, height=btnHeight, command=clearInput)
-button_decimal = Button(root, text=".", width=btnWidth, height=btnHeight, command=clearInput)
-button_pi = Button(root, text="pi", width=btnWidth, height=btnHeight, command=clearInput)
-button_randomInt = Button(root, text="RANDOM", width=btnWidth, height=btnHeight, command=clearInput)
+button_equal = Button(root, text="=", width=btnWidth, height=btnHeight+3, command=clearEntryBox)
+button_clear = Button(root, text="CLEAR", width=btnWidth, height=btnHeight, command=clearEntryBox)
+button_back1 = Button(root,text="<-", width=btnWidth, height=btnHeight, command=clearEntryBox)
+button_decimal = Button(root, text=".", width=btnWidth, height=btnHeight, command=clearEntryBox)
+button_pi = Button(root, text="pi", width=btnWidth, height=btnHeight, command=clearEntryBox)
+button_randomInt = Button(root, text="RANDOM", width=btnWidth, height=btnHeight, command=clearEntryBox)
 
 # More Math Buttons
 button_square = Button(root, text="x^2", width=btnWidth, height=btnHeight)
@@ -83,8 +107,8 @@ label_Tab.grid(row=0, column=2)
 label_View.grid(row=0, column=3)
 label_change1.grid(row=0, column=4)
 
-# Entry box grid
-inputBox.grid(row=1, column=0, columnspan=5)
+# Entry box grid 
+inputBox.grid(ipady=20, row=1, column=0, columnspan=5)
 
 # Number Buttons grid AND +/- '.'
 button_7.grid(row=5, column=1)
@@ -136,3 +160,5 @@ button_mod.grid(row=4, column=3)
 ## GUI program is constantly looping to check for changes - Loop created
 root.mainloop()
 
+def main():
+    return
